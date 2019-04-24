@@ -1,4 +1,4 @@
-% code to create datasets
+% Code to create datasets.
 
 labelDir = "ac3_dbseg_images";
 targetDir = "ac3_dbseg_images_bw";

@@ -1,4 +1,4 @@
-%% Code to test the net predictions
+%% Code to test the net predictions.
 
 YTest = pximds_test.PixelLabelData;
 

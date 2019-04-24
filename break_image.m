@@ -1,5 +1,5 @@
 function out =  break_image(im, sq_len)
-% this function is to decompose an image in to smaller patches. 
+% This function is to decompose an image in to smaller patches. 
 % This can serve for 2 principal reasons: (1) a small GPU will not have
 % enough memory to train on full-sized images. (2) breaking an image in
 % multimple ones will augment the training data.

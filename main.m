@@ -2,7 +2,7 @@
 % This script is the main one where the Unet is trained to segment cells
 % imaged with the electron microscopy (EM). Here, the training has been
 % done on the AC3 and AC4 portions of the Kasthuri dataset that can be
-% downloaded at https://software.rc.fas.harvard.edu/lichtman/vast/
+% downloaded at https://software.rc.fas.harvard.edu/lichtman/vast/.
 load_net= 1;
 
 % Set initial params

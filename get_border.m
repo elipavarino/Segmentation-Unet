@@ -2,7 +2,7 @@ function BW = get_border(x)
 %function to get the borders from the labelled images. There are 2 methods
 %that can be used here: Either using the gradient of the image and filters
 %such as the Sobel, or using the morphological operations of dilation and
-%erosion
+%erosion.
 I_s = unique_rgb(x);
 
 % by changing the size of the ones(), the borders will be fatter or slimmer
