@@ -64,11 +64,15 @@ pximds_test = partitionByIndex(ds,test);
 
 
 %% Set the options for training
+
 options = trainingOptions('adam','InitialLearnRate',1e-3, 'Shuffle', 'every-epoch', ...
     'MaxEpochs',4,'VerboseFrequency',10, 'MiniBatchSize', 4,'ExecutionEnvironment','auto',...
     'Plots', 'training-progress', 'ValidationData', pximds_val, 'ValidationFrequency', 500);
 
-%% Launch the training
+
+
+%% Launch the trai
+
 doTraining = true; 
 if doTraining     
     [net,info] = trainNetwork(pximds_train,lgraph,options); 
@@ -78,13 +82,14 @@ else
 end
 
 %%
-%options = trainingOptions('adam','InitialLearnRate',1e-3, 'Shuffle', 'every-epoch', ...
-%    'MaxEpochs',2,'VerboseFrequency',10, 'MiniBatchSize', 4,'ExecutionEnvironment','auto',...
-%    'ValidationData', pximds_val, 'ValidationFrequency', 450);
+options = trainingOptions('adam','InitialLearnRate',1e-3, 'Shuffle', 'every-epoch', ...
+    'MaxEpochs',2,'VerboseFrequency',10, 'MiniBatchSize', 4,'ExecutionEnvironment','auto',...
+    'ValidationData', pximds_val, 'ValidationFrequency', 450);
 
 %%
-%for i = 1:5
-%   lgraph = layerGraph(net);
-%   [net,info] = trainNetwork(pximds_train,lgraph,options);  
-%   save(strcat('unet_epoch_', int2str(8+i*2),'.mat'), 'net', 'info');
-%end
+
+for i = 1:5
+   lgraph = layerGraph(net);
+   [net,info] = trainNetwork(pximds_train,lgraph,options);  
+   save(strcat('unet_epoch_', int2str(8+i*2),'.mat'), 'net', 'info');
+end

@@ -1,4 +1,4 @@
-% code to create datasets
+
 
 labelDir = "ac3_dbseg_images";
 targetDir = "ac3_dbseg_images_bw";
@@ -12,8 +12,7 @@ r1=1;r2=256;
 
 % there was a problem for the name of the files, whereby the labels
 % comenced with an order in the EM stack, and the reverse numeration in the
-% label images. Thus, the following code is an excamotage to ovviate this
-% problem.
+% label images. Thus, the following code is an e
 for i = r1:r2
     s = num2str(i*1e-4, '%1.4f');
     s = s(3:end);

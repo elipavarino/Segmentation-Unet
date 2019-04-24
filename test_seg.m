@@ -1,3 +1,5 @@
+%% Code to test the net predictions
+
 YTest = pximds_test.PixelLabelData;
 
 n_imds = imageDatastore(pximds_test.Images);
